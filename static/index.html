@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+     <form action="/execute" method="post">
+     Attribute 1:<input type="text" name="attribute1"><br>
+     Attribute 2:<input type="text" name="attribute2"><br>
+     Clusters:<input type="text" name="clusters"><br>
+         <button class="button button-block"/>Execute</button><br>
+         {% for item in distances%}
+         Distances between each cluster : {{item}}<br>
+         {% endfor %}
+         {% for item in points%}
+         No of points in each color : {{item}}<br>
+         {% endfor %}
+     </form><br>
+   <form action="/show" method="post">
+         <button class="button button-block"/>show</button>
+     </form><br>
+</body>
+</html>
